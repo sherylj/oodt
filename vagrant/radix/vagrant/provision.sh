@@ -48,6 +48,7 @@ sudo mvn archetype:generate -DinteractiveMode=false -DarchetypeGroupId=org.apach
 cd ${PROJECT_ARTIFACT_ID}
 sudo mvn package ${BUILD_FLAGS}
 tar zxf distribution/target/${PROJECT_ARTIFACT_ID}-distribution-*-bin.tar.gz -C ${OODT_DEPLOYMENT_HOME}
+sudo chown -R vagrant:vagrant ${OODT_DEPLOYMENT_HOME}
 
 # ---------- Start OODT ----------
 cd ${OODT_DEPLOYMENT_HOME}/bin
